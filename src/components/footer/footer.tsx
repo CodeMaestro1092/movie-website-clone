@@ -28,18 +28,22 @@ const Footer = () => {
                     esse cillum dolore eu fugiat nulla pariatur.
                 </div>
                 <div className="socialIcons">
+                    <a href="https://www.facebook.com/profile.php?id=100069656258383" target="_blank">
                     <span className="icon">
                         <FaFacebookF />
                     </span>
+                    </a>
                     <span className="icon">
                         <FaInstagram />
                     </span>
                     <span className="icon">
                         <FaTwitter />
                     </span>
+                    <a href="https://www.linkedin.com/in/tornike-eloshvili-40b729252/" target="_blank">
                     <span className="icon">
                         <FaLinkedin />
                     </span>
+                    </a>
                 </div>
             </ContentWrapper>
         </footer>
