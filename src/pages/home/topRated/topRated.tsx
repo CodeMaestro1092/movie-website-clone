@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ContentWrapper from "../../../components/contentWrapper/contentWrapper";
 import SwitchTabs from "../../../components/switchTabs/switchTabs";
 import useFetch from "../../../hooks/useFetch";
@@ -8,7 +8,7 @@ const TopRated = () => {
   const [endpoint, setEndPoint] = useState("movie");
   const { data, loading } = useFetch(`/${endpoint}/top_rated`);
 
-  const onTabChange = (tab: string, index?: number) => {
+  const onTabChange = (tab: string) => {
 
     setEndPoint(tab === "Movie" ? "movie" : "tv");
   };

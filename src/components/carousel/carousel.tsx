@@ -14,7 +14,6 @@ import CircleRating from "../circleRating/circleRating";
 
 import "./carousel.scss";
 import Genres from "../genres/genres";
-import { Result } from "../../pages/searchResult/searchResult";
 
 interface CarouselProps {
   data: {

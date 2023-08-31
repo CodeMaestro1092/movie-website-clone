@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchDataFromApi } from "../../utils/api";
 import ContentWrapper from "../../components/contentWrapper/contentWrapper";
 import MovieCard from "../../components/movieCard/movieCard";
 import Spinner from "../../components/spinner/spinner";
-import noResults from "../../assets/no-results.png";
 import "./searchResult.scss";
 export interface Result {
   name: string;

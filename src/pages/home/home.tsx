@@ -1,4 +1,3 @@
-import React from 'react'
 import HeroBanner from './heroBanner/heroBanner'
 import Trending from './trending/trending'
 import Popular from './popular/popular'

@@ -9,7 +9,7 @@ interface RecommedationProps{
 }
 
 const Recommendation: React.FC<RecommedationProps> = ({ mediaType, id }) => {
-    const { data, loading, error } = useFetch(
+    const { data, loading } = useFetch(
         `/${mediaType}/${id}/recommendations`
     );
 

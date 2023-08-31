@@ -9,7 +9,7 @@ interface SimilarProps{
 }
 
 const Similar: React.FC<SimilarProps> = ({ mediaType, id }) => {
-    const { data, loading, error } = useFetch(`/${mediaType}/${id}/similar`);
+    const { data, loading } = useFetch(`/${mediaType}/${id}/similar`);
 
     const title = mediaType === "tv" ? "Similar TV Shows" : "Similar Movies";
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ContentWrapper from "../../../components/contentWrapper/contentWrapper";
 import SwitchTabs from "../../../components/switchTabs/switchTabs";
 import useFetch from "../../../hooks/useFetch";
@@ -9,7 +9,7 @@ const Trending = () => {
   const [endpoint, setEndPoint] = useState("day");
   const { data, loading } = useFetch(`/trending/movie/${endpoint}`);
 
-  const onTabChange = (tab: string, index?: number) => {
+  const onTabChange = (tab: string) => {
 
     setEndPoint(tab === "Day" ? "day" : "week");
   };
