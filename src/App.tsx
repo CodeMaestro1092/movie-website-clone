@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { fetchDataFromApi } from "./utils/api";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { getApiConfiguration, getGenres } from "./store/homeSlice";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/header/header";
@@ -22,8 +22,6 @@ type GenresProps = {
 
 const App = () => {
   const dispatch = useDispatch();
-  const { url } = useSelector((state: any) => state.home);
-  console.log(url);
   const fetchApiConfig = async () => {
     try {
       fetchDataFromApi("/configuration").then((res) => {
@@ -35,7 +33,6 @@ const App = () => {
         dispatch(getApiConfiguration(url));
       }); // Use the correct endpoint for configuration
     } catch (error) {
-      console.error(error);
     }
   };
   useEffect(() => {

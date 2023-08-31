@@ -21,7 +21,6 @@ const HeroBanner = () => {
     if (data && url.backdrop) {
       const randomIndex = Math.floor(Math.random() * data.results.length);
       const movie = data.results[randomIndex] as Movie;
-      console.log(url.backdrop + (movie?.backdrop_path))
       setBackground(url.backdrop + (movie?.backdrop_path ?? ""));
     }
   }, [data]);
@@ -31,6 +30,12 @@ const HeroBanner = () => {
       navigate(`/search/${query}`);
     }
   };
+  const handleButtonClick = () => {
+    if (query.length > 0) {
+      navigate(`/search/${query}`);
+    }
+  };
+
   return (
     <div className="heroBanner">
       {!loading && (
@@ -53,7 +58,7 @@ const HeroBanner = () => {
                 onKeyUp={searchQueryHandler}
                 onChange={(e) => setQuery(e.target.value)}
               />
-              <button>Search</button>
+              <button onClick={handleButtonClick}>Search</button>
             </div>
           </div>
         </div>
