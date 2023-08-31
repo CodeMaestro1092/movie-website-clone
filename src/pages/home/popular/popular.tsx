@@ -9,7 +9,7 @@ const Popular = () => {
   const { data, loading } = useFetch(`/${endpoint}/popular`);
 
   const onTabChange = (tab: string) => {
-    setEndPoint(tab === "Movie" ? "movie" : "tv");
+    setEndPoint(tab === "Movies" ? "movie" : "tv");
   };
   return (
     <div className="carouselSection">
